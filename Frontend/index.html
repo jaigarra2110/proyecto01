@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario inicio de sesión</title>
+    <link rel="stylesheet" href="/css/formulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <div class="container-form register hide">
+        <div class="information">
+            <div class="info-childs">
+                <h2>¡Bienvenido al sistema!</h2>
+                <p>Rellena el formulario que está a la derecha para crear una cuenta</p>
+                <br>
+                <p>Si ya tienes una cuenta, click al siguiente botón para iniciar sesión:</p>
+                <input type="button" value="Iniciar Sesión" id="sign-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Crear una cuenta</h2>
+                <p>Ingresa tus datos:</p>
+                <form class="form" id="registroForm">
+                    <label>
+                        <i class='bx bxs-user' ></i>
+                        <input type="text" placeholder="Nombre de usuario" id="nombreUsuario">
+                    </label>
+                    <label>
+                        <i class='bx bxs-lock-alt' ></i>
+                        <input type="password" placeholder="Contraseña" id="contraseña">
+                    </label>
+                    <label>
+                        <i class='bx bx-envelope' ></i>
+                    <input type="email" placeholder="Correo Electrónico" name="" id="correo">
+                    </label>
+                    <label for="idRol"><i class='bx bxs-user-account'></i>Rol:
+                        
+                    <select id="idRol" name="idRol" required>
+                        <option value="" disabled selected>Selecciona un rol</option>
+                    </select>
+                </label>
+
+                    <button type="submit" class="submit-btn" onclick="registrarse();">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container-form login ">
+        <div class="information">
+            <div class="info-childs">
+                <h2>¡Bienvenido al sistema!</h2>
+                <p>Inicia sesión con alguna cuenta</p>
+                <br>
+                <p>Si aún no tienes una cuenta, click al siguiente botón para crear una:</p>
+                <input type="button" value="Registrarse" id="sign-up">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Iniciar Sesión</h2>
+              <p>Ingresa tu nombre de usuario y contraseña</p>
+              <form class="form" id="loginForm">
+                <label>
+                    <i class='bx bxs-user'></i>
+                    <input type="text" id="nombreuser" placeholder="Nombre de usuario">
+                </label>
+                <label>
+                    <i class='bx bxs-lock-alt'></i>
+                    <input type="password" id="password" placeholder="Contraseña">
+                </label>
+               
+                <button type="submit" class="submit-btn" onclick="login();">Iniciar sesión</button>
+            </form>
+            </div>
+        </div>
+    </div>
+
+<script src="./js/script.js"></script>
+</body>
+</html>
